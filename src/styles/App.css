@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+:root {
+  /*   ## Colors
+
+### Primary */
+
+  --strongCyan: hsl(172, 67%, 45%);
+
+  /* ### Neutral */
+
+  --veryDarkCyan: hsl(183, 100%, 15%);
+  --darkGrayishCyan: hsl(186, 14%, 43%);
+  --grayishCyan: hsl(184, 14%, 56%);
+  --lightGrayishCyan: hsl(185, 41%, 84%);
+  --veryLightGrayishCyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+Body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--lightGrayishCyan);
+  font-family: "Space Mono", monospace;
+  overflow-x: hidden;
+}
+/*************** Header *************** */
+
+header {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*************** container main *************** */
+.section-container-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/*************** section-Form *************** */
+
+.section-card {
+  margin-top: 100px;
+  height: auto;
+  width: 100%;
+  background-color: var(--White);
+  justify-content: center;
+  border-radius: 20px 20px 0px 0px;
+}
+form {
+  padding: 30px 30px;
+}
+
+label {
+  color: var(--grayishCyan);
+  font-weight: 700;
+}
+.section-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-evenly;
+}
+
+.section-buttons .btn {
+  width: 140px;
+  background-color: var(--veryDarkCyan);
+  color: white;
+}
+.section-buttons input {
+  width: 140px;
+}
+#inputBill {
+  background-image: url(../assets/images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: 5% 50%;
+  background-color: var(--veryLightGrayishCyan);
+  text-align: end;
+  font-size: 20px;
+  color: var(--veryDarkCyan);
+}
+
+#numberPeople {
+  background-image: url(../assets/images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: 5% 50%;
+  background-color: var(--veryLightGrayishCyan);
+  text-align: end;
+  font-size: 20px;
+  color: var(--veryDarkCyan);
+}
+#custom {
+  width: 150px;
+  text-align: end;
+  font-size: 20px;
+}
+
+/*************** section-bill *************** */
+
+.section-bill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section-people {
+  margin-top: 10px;
+}
+
+.section-tip {
+  height: 150px;
+  margin-bottom: 50px;
+}
+
+.tip-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 85%;
+  margin: 10px auto;
+  position: relative;
+}
+
+#tip {
+  position: absolute;
+  z-index: 100;
+  inset: 0;
+  opacity: 0;
+}
+
+.btn {
+  background-color: var(--veryDarkCyan);
+  position: absolute;
+  z-index: 0;
+  width: 150px;
+  color: white;
+  font-size: 20px;
+}
+
+#tip:hover + .btn {
+  background-color: var(--lightGrayishCyan);
+  color: black;
+}
+
+#tip:checked + .btn {
+  background-color: var(--strongCyan);
+  color: black;
+}
+/*************** section-Results *************** */
+
+.section-container-second {
+  height: 250px;
+  background-color: var(--veryDarkCyan);
+  width: 85%;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  margin-bottom: 20px;
+}
+
+.section-container-second h5 {
+  color: white;
+}
+.section-container-second p {
+  color: var(--lightGrayishCyan);
+}
+.section-container-second h1 {
+  color: var(--strongCyan);
+}
+
+.btn-reset {
+  width: 100%;
+  background-color: rgba(0, 255, 255, 0.11) !important;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 10px;
+  color: rgba(0, 0, 0, 0.336);
+}
+.btn-reset.active {
+  width: 100%;
+  background-color: var(--strongCyan) !important;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 10px;
+  color: rgb(0, 0, 0);
+}
+
+.btn-reset.active:hover {
+  background-color: var(--lightGrayishCyan) !important;
+}
+
+.attribution {
+  margin-bottom: 10px;
+  font-size: 11px;
+  text-align: center;
+  
+ 
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media only screen and (min-width: 768px) {
+  /*************** container main *************** */
+  .section-container-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  /*************** section-Form *************** */
+
+  .section-card {
+    margin-top: 0;
+    width: 75%;
+    background-color: var(--White);
+    justify-content: center;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 10px 19px 33px 0px rgba(0, 0, 0, 0.233);
+  }
+  .tip-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 80%;
+    margin: 10px auto;
+    position: relative;
+  }
+  #tip {
+    position: absolute;
+    z-index: 100;
+    inset: 0;
+    opacity: 0;
+  }
+
+  .btn {
+    background-color: var(--veryDarkCyan);
+    position: absolute;
+    z-index: 0;
+    width: 60px;
+    color: white;
+    padding: 10px 0px;
+    font-size: 20px;
+  }
+
+  #tip:hover + .btn {
+    background-color: var(--lightGrayishCyan);
+    color: black;
+  }
+
+  #tip:checked + .btn {
+    background-color: var(--strongCyan);
+    color: black;
+  }
+  #custom {
+    width: 110px;
+    padding: 10px;
+    align-items: end;
+  }
+
+  /*************** section-Results *************** */
+
+  .section-container-second {
+    height: 80%;
+    background-color: var(--veryDarkCyan);
+    width: 90%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 20px;
+    margin-bottom: 0px;
+    margin-top: 40px;
+    margin-right: 50px;
+  }
+
+  .btn-reset {
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0.11) !important;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 10px;
+    color: rgba(0, 0, 0, 0.336);
+    margin-top: 60px;
+  }
+
+  .section-people {
+    margin-bottom: 50px;
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .btn {
+    background-color: var(--veryDarkCyan);
+    position: absolute;
+    z-index: 0;
+    width: 110px;
+    color: white;
+    padding: 10px 0px;
+    font-size: 20px;
+  }
+
+  .section-card {
+    margin-top: 0;
+    width: 60%;
+    background-color: var(--White);
+    justify-content: center;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 10px 19px 33px 0px rgba(0, 0, 0, 0.233);
+  }
+
+  .tip-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 80%;
+    margin: 5px auto;
+    position: relative;
+  }
+  #custom {
+    width: 110px;
+    padding: 12px;
+    text-align: end;
+    font-size: 18px;
+  }
+}
