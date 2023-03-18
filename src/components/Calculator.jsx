@@ -78,7 +78,7 @@ function Calculator({ newData, setNewData }) {
                   <input
                     onClick={handleClick}
                     type="radio"
-                    value="0.5"
+                    value="0.05"
                     id="tip"
                     {...register("input")}
                   />
